@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #0f1418;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f1418;
+  color: #f1f5f9;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1418;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #20b2a6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a8e85;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+  
+  .glass-teal {
+    @apply bg-[#20b2a6]/10 backdrop-blur-lg border border-[#20b2a6]/20;
+  }
+
+  .nav-link {
+    @apply text-slate-300 hover:text-primary transition-colors duration-300 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-[#1a8e85] transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+}
+
+@keyframes shooting-star {
+  0% { transform: translateX(0) translateY(-100%) rotate(45deg); opacity: 1; }
+  20% { transform: translateX(-200px) translateY(100px) rotate(45deg); opacity: 0; }
+  100% { transform: translateX(-200px) translateY(100px) rotate(45deg); opacity: 0; }
+}
+
+.animate-shooting-star {
+  animation: shooting-star 5s linear infinite;
+}
