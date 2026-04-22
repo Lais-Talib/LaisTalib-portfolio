@@ -47,7 +47,7 @@ const Skills = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold mb-4"
           >
-            Technical Proficiency
+            Technical Skills
           </motion.h2>
           <motion.div
             initial={{ width: 0 }}
